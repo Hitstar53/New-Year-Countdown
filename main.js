@@ -4,7 +4,7 @@ let hrBox = document.getElementById("hr-box");
 let minBox = document.getElementById("min-box");
 let secBox = document.getElementById("sec-box");
 //let endDate = new Date(2023, 0, 1, 00, 00);
-let endDate = new Date(2022, 11, 31, 20, 45);
+let endDate = new Date(2022, 11, 31, 20, 47);
 let endTime = endDate.getTime();
 
 function countdown() {
@@ -56,8 +56,8 @@ class Confetti {
         this.y = y;
         this.color = color;
         this.rotation = random(0, 360);
-        this.scale = random(0.3, 1);
-        this.speed = random(2, 5);
+        this.scale = random(0.2, 1);
+        this.speed = random(2, 6);
     }
     // Create a method to draw a single confetti object on the canvas
     draw() {
