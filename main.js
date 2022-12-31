@@ -4,7 +4,7 @@ let hrBox = document.getElementById("hr-box");
 let minBox = document.getElementById("min-box");
 let secBox = document.getElementById("sec-box");
 //let endDate = new Date(2023, 0, 1, 00, 00);
-let endDate = new Date(2022, 11, 31, 20, 41);
+let endDate = new Date(2022, 11, 31, 20, 43);
 let endTime = endDate.getTime();
 
 function countdown() {
@@ -21,7 +21,7 @@ function countdown() {
         clearInterval(i);
         document.querySelector(
             ".celebration"
-        ).innerHTML = `<h1>Happy New Year Everyone!</h1>`;
+        ).innerHTML = `<h2>Happy New Year Everyone!</h2>`;
         runConfetti();
     } else {
         let daysLeft = Math.floor(remainingTime / oneDay);
