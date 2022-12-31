@@ -4,7 +4,7 @@ let hrBox = document.getElementById("hr-box");
 let minBox = document.getElementById("min-box");
 let secBox = document.getElementById("sec-box");
 //let endDate = new Date(2023, 0, 1, 00, 00);
-let endDate = new Date(2022, 11, 31, 20, 47);
+let endDate = new Date(2022, 11, 31, 20, 48);
 let endTime = endDate.getTime();
 
 function countdown() {
@@ -100,7 +100,7 @@ function updateConfetti() {
 }
 // Create a function to run the confetti animation
 function runConfetti() {
-    setInterval(createConfetti, 50);
+    setInterval(createConfetti, 75);
     // Draw and update the confetti every 20 milliseconds
     setInterval(function () {
         drawConfetti();
