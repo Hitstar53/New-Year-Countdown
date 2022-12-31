@@ -160,4 +160,8 @@ span.text {
         font-size: 0.6em;
         width: 100%;
     }
+    .celebration {
+        top: 80%;
+        left: 0;
+    }
 }
