@@ -4,7 +4,7 @@ let hrBox = document.getElementById("hr-box");
 let minBox = document.getElementById("min-box");
 let secBox = document.getElementById("sec-box");
 //let endDate = new Date(2024, 0, 1, 00, 00);
-let endDate = new Date(2023, 0, 1, 14, 53);
+let endDate = new Date(2023, 0, 1, 14, 56);
 let endTime = endDate.getTime();
 
 function countdown() {
@@ -26,7 +26,7 @@ function countdown() {
         setTimeout(() => {
             document.querySelector(".celebration").innerHTML = "";
         }, 25000);
-        endDate = new Date(endDate.getFullYear(), 0, 1, 14, 54);
+        endDate = new Date(endDate.getFullYear(), 0, 1, 14, 57);
         endTime = endDate.getTime();
         setTimeout(() => {
             i = setInterval(countdown, 1000);
@@ -34,6 +34,7 @@ function countdown() {
         setTimeout(() => {
             stopConfetti();
         }, 25000);
+        countdown();
     } else {
         let daysLeft = Math.floor(remainingTime / oneDay);
         let hrsLeft = Math.floor((remainingTime % oneDay) / oneHr);
