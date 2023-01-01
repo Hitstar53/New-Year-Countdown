@@ -4,7 +4,7 @@ let hrBox = document.getElementById("hr-box");
 let minBox = document.getElementById("min-box");
 let secBox = document.getElementById("sec-box");
 //let endDate = new Date(2024, 0, 1, 00, 00);
-let endDate = new Date(2023, 0, 1, 14, 38);
+let endDate = new Date(2023, 0, 1, 14, 44);
 let endTime = endDate.getTime();
 
 function countdown() {
@@ -26,9 +26,14 @@ function countdown() {
         setTimeout(() => {
             document.querySelector(".celebration").innerHTML = "";
         }, 25000);
-        endDate = new Date(endDate.getFullYear() + 1, 0, 1, 00, 00);
+        endDate = new Date(endDate.getFullYear() + 1, 0, 1, 14, 45);
         endTime = endDate.getTime();
-        i = setInterval(countdown, 1000);
+        setTimeout(() => {
+            i = setInterval(countdown, 1000);
+        }, 25000);
+        setTimeout(() => {
+            stopConfetti();
+        }, 25000);
     } else {
         let daysLeft = Math.floor(remainingTime / oneDay);
         let hrsLeft = Math.floor((remainingTime % oneDay) / oneHr);
@@ -112,4 +117,8 @@ function runConfetti() {
         drawConfetti();
         updateConfetti();
     }, 20);
+}
+// Create a function to stop the confetti animation
+function stopConfetti() {
+    clearInterval(runConfetti);
 }
