@@ -26,7 +26,7 @@ function countdown() {
         setTimeout(() => {
             document.querySelector(".celebration").innerHTML = "";
         }, 25000);
-        endDate = new Date(endDate.getFullYear() + 1, 0, 1, 14, 45);
+        endDate = new Date(endDate.getFullYear(), 0, 1, 14, 45);
         endTime = endDate.getTime();
         setTimeout(() => {
             i = setInterval(countdown, 1000);
