@@ -3,8 +3,8 @@ let dayBox = document.getElementById("day-box");
 let hrBox = document.getElementById("hr-box");
 let minBox = document.getElementById("min-box");
 let secBox = document.getElementById("sec-box");
-let endDate = new Date(2024, 0, 1, 00, 00);
-//let endDate = new Date(2022, 11, 31, 20, 48);
+//let endDate = new Date(2024, 0, 1, 00, 00);
+let endDate = new Date(2023, 0, 1, 14, 25);
 let endTime = endDate.getTime();
 
 function countdown() {
@@ -23,6 +23,9 @@ function countdown() {
             ".celebration"
         ).innerHTML = `<h2>Happy New Year Everyone!</h2>`;
         runConfetti();
+        setTimeout(() => {
+            document.querySelector(".celebration").innerHTML = "";
+        }, 100000);
     } else {
         let daysLeft = Math.floor(remainingTime / oneDay);
         let hrsLeft = Math.floor((remainingTime % oneDay) / oneHr);
