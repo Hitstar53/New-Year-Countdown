@@ -31,7 +31,9 @@ function countdown() {
         setTimeout(() => {
             i = setInterval(countdown, 1000);
         }, 25000);
-        stopConfetti();
+        setTimeout(() => {
+            stopConfetti();
+        }, 25000);
     } else {
         let daysLeft = Math.floor(remainingTime / oneDay);
         let hrsLeft = Math.floor((remainingTime % oneDay) / oneHr);
